@@ -27,7 +27,7 @@ export function LoginPage() {
       password: data.get('password'),
     }
     localStorage.setItem("currentUser",user.username);
-    console.log(user);
+    // console.log(user);
       const login=(user)=>{
         fetch(`${API_URL}/login`,{
       method:"POST",
@@ -38,7 +38,7 @@ export function LoginPage() {
     .then((data)=>{
       if(data.statusCode===200){
     localStorage.setItem("token",data.token)
-    console.log(data);
+    // console.log(data);
     if(data.admin===true){
       history.push("/adminPage")
     }else{
