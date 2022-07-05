@@ -38,22 +38,22 @@ function App() {
   };
 
   useEffect(() => getMyCartNo(), []);
-  const [products, setProducts] = useState([]);
-  const getProducts = () => {
-    fetch(`${API_URL}/products`, {
-      method: "GET",
-      headers: {
-        "content-Type": "application/json",
-        "x-auth-token": localStorage.getItem("token"),
-      },
-    })
-      .then((data) => data.json())
-      .then((data) => {
-        setProducts(data.message);
-        // console.log(products)
-      });
-  };
-  useEffect(() => getProducts, []);
+  // const [products, setProducts] = useState([]);
+  // const getProducts = () => {
+  //   fetch(`${API_URL}/products`, {
+  //     method: "GET",
+  //     headers: {
+  //       "content-Type": "application/json",
+  //       "x-auth-token": localStorage.getItem("token"),
+  //     },
+  //   })
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       setProducts(data.message);
+  //       // console.log(products)
+  //     });
+  // };
+  // useEffect(() => getProducts, []);
   return (
     <div className="App">
       <Switch>
