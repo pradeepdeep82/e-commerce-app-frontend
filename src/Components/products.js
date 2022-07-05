@@ -47,7 +47,7 @@ const addToCart=(index)=>{
   })
 
 }
-useEffect(()=>getProducts,[])
+useEffect(()=>getProducts(),[])
   return (
    
     
