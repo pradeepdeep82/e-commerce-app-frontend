@@ -1,38 +1,33 @@
-.App {
+body{
   text-align: center;
+ 
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.background{
+  position: relative; 
+    height: 90.5vh;
+    width: 100%;
+    display: flex;
+    opacity: 0.4;
+    background-image: url("https://cdn.shopify.com/s/files/1/0376/8545/files/IMG_20190111_134240_1400x.jpg?v=1648834577");
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .text{
+    position:absolute;
+    top: 30vh;
+    left: 30vw;
+    font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Moonrocks', cursive;
+font-family: 'Smooch', cursive;
+font-family: 'Yellowtail', cursive;
+font-size: 90px;
   }
-  to {
-    transform: rotate(360deg);
+  .wishlist{
+    border: 0px solid;
+    
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-right: 10vw;
+    border-radius: 15px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   }
-}
