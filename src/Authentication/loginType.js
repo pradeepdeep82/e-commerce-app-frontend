@@ -88,6 +88,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 export default function LoginType() {
   const history=useHistory();
   return (
+    <div>
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
         <ImageButton
@@ -125,5 +126,12 @@ export default function LoginType() {
         </ImageButton>
       ))}
     </Box>
+    <div className='row'>
+      <div className='offset-sm-1 col-sm-2'>
+        <h4>Admin Id: </h4><span>pradeep@gmail.com</span>
+        <h4>Admin password: </h4><span>12345678910Aa@</span>
+      </div>
+    </div>
+    </div>
   )
 }

@@ -13,6 +13,7 @@ import LoginType from "./Authentication/loginType.js"
 import { API_URL } from "./Components/global-constants";
 import AdminPage from "./Components/adminPage";
 import AddProducts from "./Components/addProducts";
+import Checkout from "./Components/Checkout/checkout";
 
 function App() {
   const [myCart, setMyCart] = useState([]);
@@ -81,6 +82,9 @@ function App() {
         <Route exact path="/">
           <DashboardHome />
           <Background />
+        </Route>
+        <Route exact path="/checkout">
+          <Checkout/>
         </Route>
         <Route exact path="/wishlist">
           <DashboardProfile myCart={myCart} />

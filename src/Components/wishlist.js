@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { API_URL } from "./global-constants";
-
+import Button from '@mui/material/Button';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // export const UserContext = createContext()
 export default function Wishlist({ getMyCartNo}) {
   const [myCart, setMyCart] = useState([]);
   const [text, setText]= useState("");
-
+  const history=useHistory();
 
   const getMyCart = () => {
     fetch(`${API_URL}/wishlist`, {
@@ -123,7 +124,8 @@ export default function Wishlist({ getMyCartNo}) {
       }
   
       <div>
-     { !text ?<h4 style={{marginTop:"20px",marginLeft:"10%",textAlign:"left"}}>Total Amount - Rs. {sum}</h4>
+     { !text ?<h4 style={{marginTop:"20px",marginLeft:"10%",textAlign:"left"}}>Total Amount - Rs. {sum}
+        <br/><br/><Button onClick={()=>history.push("/checkout")} variant="contained">Proceed to Checkout</Button></h4>
         :<h4>{text}</h4>
     }
       </div>
